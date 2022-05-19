@@ -15,13 +15,9 @@ public class GatewayConfig {
 
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder) {
-//        return builder.routes().route("backend_security", r -> r.path("/security/**", "/securityU/**", "/securitySuper/**").uri("http://securityB:8081"))
-//                .route("backend_security", r -> r.path("/login").uri("http://securityB:8081"))
-//                .route("backend_user", r -> r.path("/control/**").filters(f -> f.filter(filter)).uri("http://usersB:8082")).build();
-        return builder.routes()
-                .route("backend_security", r -> r.path("/security/**", "/securityU/**", "/securitySuper/**").uri("http://localhost:8081"))
-                .route("backend_security", r -> r.path("/login").uri("http://localhost:8081"))
-                .route("backend_user", r -> r.path("/control/**").filters(f -> f.filter(filter)).uri("http://localhost:8082")).build();
+        return builder.routes().route("backend_security", r -> r.path("/security/**", "/securityU/**", "/securitySuper/**").uri("http://securityB:8081"))
+                .route("backend_security", r -> r.path("/login").uri("http://securityB:8081"))
+                .route("backend_user", r -> r.path("/control/**").filters(f -> f.filter(filter)).uri("http://usersB:8082")).build();;
     }
 
 }
