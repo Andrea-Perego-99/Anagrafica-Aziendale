@@ -224,8 +224,7 @@ public class DetailService implements UserDetailsService {
         HttpEntity<String> entityReq = new HttpEntity<>(json, requestHeader);
 
         try{
-            ResponseEntity<String> result = restTemplate.exchange("http://localhost:8082/control/admin/update",
-//            ResponseEntity<String> result = restTemplate.exchange("http://usersB:8082/control/admin/update",
+            ResponseEntity<String> result = restTemplate.exchange("http://usersB:8082/control/admin/update",
                     HttpMethod.PUT,
                     entityReq,
                     String.class);
@@ -248,8 +247,7 @@ public class DetailService implements UserDetailsService {
         HttpEntity<String> entityReq = new HttpEntity<String>(json, requestHeader);
 
         try{
-            ResponseEntity<String> result = restTemplate.exchange("http://localhost:8082/control/admin/registration",
-//            ResponseEntity<String> result = restTemplate.exchange("http://usersB:8082/control/admin/registration",
+            ResponseEntity<String> result = restTemplate.exchange("http://usersB:8082/control/admin/registration",
                     HttpMethod.POST,
                     entityReq,
                     String.class);
@@ -272,8 +270,7 @@ public class DetailService implements UserDetailsService {
         HttpEntity<String> entityReq = new HttpEntity<String>(json, requestHeader);
 
         try{
-            ResponseEntity<String> result = restTemplate.exchange("http://localhost:8082/control/admin/delete",
-//            ResponseEntity<String> result = restTemplate.exchange("http://usersB:8082/control/admin/delete",
+            ResponseEntity<String> result = restTemplate.exchange("http://usersB:8082/control/admin/delete",
                     HttpMethod.DELETE,
                     entityReq,
                     String.class);
@@ -299,8 +296,7 @@ public class DetailService implements UserDetailsService {
         HttpEntity<String> entityReq = new HttpEntity<String>(json, requestHeader);;
 
         try{
-            ResponseEntity<String> result = restTemplate.exchange("http://localhost:8082/control/admin/enable",
-//            ResponseEntity<String> result = restTemplate.exchange("http://usersB:8082/control/admin/enable",
+            ResponseEntity<String> result = restTemplate.exchange("http://usersB:8082/control/admin/enable",
                     HttpMethod.PUT,
                     entityReq,
                     String.class);
