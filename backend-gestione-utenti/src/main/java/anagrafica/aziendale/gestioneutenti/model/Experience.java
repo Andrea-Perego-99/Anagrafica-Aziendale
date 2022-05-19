@@ -47,4 +47,18 @@ public class Experience {
         this.description = description;
         this.companyConsulting = companyConsulting;
     }
+
+    @Override
+    public String toString() {
+        return "Experience{" +
+                "id=" + id +
+                ", person=" + person +
+                ", company='" + company + '\'' +
+                ", position='" + position + '\'' +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", description='" + description + '\'' +
+                ", companyConsulting='" + companyConsulting + '\'' +
+                '}';
+    }
 }

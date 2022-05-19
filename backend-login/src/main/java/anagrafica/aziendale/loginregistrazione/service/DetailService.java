@@ -130,14 +130,11 @@ public class DetailService implements UserDetailsService {
         AppUser appUser = userRepository.findByEmail(user)
                 .orElseThrow(() -> new RuntimeException("Email not found"));
 
-        if(appUserDTO.getPassword().length() < 8 || appUserDTO.getPassword().length() > 17 ){
+        if(appUserDTO.getPassword().length() > 8 || appUserDTO.getPassword().length() < 17 ){
             appUser.setPassword(passwordEncoder.encode(appUserDTO.getPassword()));
         }else{
             throw new RuntimeException("password incorrect");
         }
-
-
-
     }
 
 

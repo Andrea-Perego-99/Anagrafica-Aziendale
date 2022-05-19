@@ -53,7 +53,6 @@ const Environment = {
     },
   ],
   // Variables
-  epoch: { day: 9, month: "July", year: 2006 },
   defaultUser: {
     email: "",
     token: "",

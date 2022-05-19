@@ -32,7 +32,6 @@ const PasswordShard = () => {
           <li>Almeno una lettera maiuscola</li>
           <li>Almeno una lettera minuscola</li>
           <li>Almeno un numero</li>
-          <li>Almeno un simbolo</li>
           <li>Deve essere di almeno 8 caratteri ma non più di 16</li>
         </ul>
       </label>

@@ -17,7 +17,7 @@ export const userSlice = createSlice({
     city: "",
     telephoneNumber: "",
     image: "",
-    birthday: Environment.epoch,
+    birthday: "",
     hardSkills: [],
     officeSuiteSkills: [],
     softSkills: [],
@@ -46,7 +46,7 @@ export const userSlice = createSlice({
       state.postalCode = "";
       state.city = "";
       state.telephoneNumber = "";
-      state.birthday = Environment.epoch;
+      state.birthday = "";
       state.hardSkills = [];
       state.officeSuiteSkills = [];
       state.softSkills = [];

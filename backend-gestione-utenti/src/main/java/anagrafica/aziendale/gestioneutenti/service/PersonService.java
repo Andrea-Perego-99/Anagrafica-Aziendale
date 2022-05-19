@@ -1,6 +1,5 @@
 package anagrafica.aziendale.gestioneutenti.service;
 
-import anagrafica.aziendale.gestioneutenti.model.DTO.RegistrationDTO;
 import anagrafica.aziendale.gestioneutenti.model.DTO.SkillDTO;
 import anagrafica.aziendale.gestioneutenti.model.Experience;
 import anagrafica.aziendale.gestioneutenti.model.Images;

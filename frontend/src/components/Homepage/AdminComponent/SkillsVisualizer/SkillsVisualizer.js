@@ -7,15 +7,6 @@ const SkillsVisualizer = () => {
   const [hardSkills, setHardSkills] = useState([]);
   const [softSkills, setSoftSkills] = useState([]);
 
-  const removeHardSkill = (e) => {
-    GlobalCommunications.deleteSkill(
-      token,
-      e.target.id,
-      setHardSkills,
-      setSoftSkills
-    );
-  };
-
   return (
     <>
       <button
@@ -41,9 +32,6 @@ const SkillsVisualizer = () => {
               <th scope="col">
                 <h2>Hard skills</h2>
               </th>
-              <th scope="col">
-                <h2>Delete Button</h2>
-              </th>
             </tr>
           </thead>
           {hardSkills ? (
@@ -53,15 +41,6 @@ const SkillsVisualizer = () => {
                   <tr>
                     <td>
                       <h5>{element.name}</h5>
-                    </td>
-                    <td>
-                      <button
-                        className="btn btn-danger"
-                        onClick={removeHardSkill}
-                        id={element.name}
-                      >
-                        DELETE
-                      </button>
                     </td>
                   </tr>
                 </tbody>

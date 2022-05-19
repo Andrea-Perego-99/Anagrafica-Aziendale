@@ -206,7 +206,7 @@ const GlobalUtilities = {
       console.log("user.birthDay: ", user.birthDay);
       cleanUser.birthday = this.reverseDateSlicer(user.birthDay);
     } else {
-      cleanUser.birthday = Environment.epoch;
+      cleanUser.birthday = "";
     }
     if (user.experience) {
       const array = [];
@@ -312,15 +312,15 @@ const GlobalUtilities = {
     for (let i = 0; i < password.length; i++) {
       console.log(password[i], password[i].charCodeAt(0));
       // E' una lettera maiuscola
-      if (65 >= password[i].charCodeAt(0) && password[i].charCodeAt(0) <= 90) {
+      if (65 <= password[i].charCodeAt(0) && password[i].charCodeAt(0) <= 90) {
         cLetters++;
       }
       // E' una lettera minuscola
-      if (97 >= password[i].charCodeAt(0) && password[i].charCodeAt(0) <= 122) {
+      if (97 <= password[i].charCodeAt(0) && password[i].charCodeAt(0) <= 122) {
         mLetters++;
       }
       // E' un numero
-      if (48 >= password[i].charCodeAt(0) && password[i].charCodeAt(0) <= 57) {
+      if (48 <= password[i].charCodeAt(0) && password[i].charCodeAt(0) <= 57) {
         numbers++;
       }
     }

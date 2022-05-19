@@ -16,7 +16,7 @@ const rootReducer = (state, action) => {
       postalCode: "",
       city: "",
       telephoneNumber: "",
-      birthday: Environment.epoch,
+      birthday: "",
       // programmingLanguageSkills: [],
       // programmingLanguageProficencies: [],
       // frameworkSkills: [],

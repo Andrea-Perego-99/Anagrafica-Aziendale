@@ -780,23 +780,6 @@ const GlobalCommunications = {
       }
     });
   },
-
-  deleteSkill: async (token, name, setSoftSkills, setHardSkills) => {
-    fetch("http://localhost:8080/control/admin/deleteH", {
-      mode: "cors",
-      method: "DELETE",
-      headers: { "Content-Type": "application/json", Authorization: token },
-      body: JSON.stringify({ name: name }),
-    }).then((res) => {
-      console.log("deleteSkill: ", res.status);
-      if (res.status === 200) {
-        this.getAllHardSkills(token, setHardSkills, setSoftSkills);
-        return true;
-      } else {
-        return false;
-      }
-    });
-  },
 };
 
 export default GlobalCommunications;

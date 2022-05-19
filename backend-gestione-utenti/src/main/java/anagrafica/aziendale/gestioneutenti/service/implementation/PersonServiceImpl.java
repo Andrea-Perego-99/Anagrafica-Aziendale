@@ -1,6 +1,5 @@
 package anagrafica.aziendale.gestioneutenti.service.implementation;
 
-import anagrafica.aziendale.gestioneutenti.model.DTO.RegistrationDTO;
 import anagrafica.aziendale.gestioneutenti.model.DTO.SkillDTO;
 import anagrafica.aziendale.gestioneutenti.model.*;
 import anagrafica.aziendale.gestioneutenti.repository.CommunicationRepo.PHrepository;
@@ -15,7 +14,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.transaction.Transactional;
 import java.io.IOException;
-import java.util.Collection;
 import java.util.Optional;
 
 @Service @RequiredArgsConstructor @Transactional
@@ -233,10 +231,14 @@ public class PersonServiceImpl implements PersonService {
         Person person = personRepository.findByEmail(email)
                 .orElseThrow(() -> new IllegalStateException("Email not present"));
 
-        Collection<Experience> experiences = person.getExperience();
-        experiences.remove(experience);
+        experience.setPerson(person);
 
-        personRepository.save(person);
+        Optional<Experience> deleteEx = experienceRepository.existsExperience(person, experience);
+
+        if(deleteEx.isPresent()){
+            experienceRepository.delete(deleteEx.get());
+            personRepository.save(person);
+        }
 
     }
 
