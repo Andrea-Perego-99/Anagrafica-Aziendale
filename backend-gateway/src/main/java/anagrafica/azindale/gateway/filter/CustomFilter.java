@@ -41,8 +41,7 @@ public class CustomFilter implements GatewayFilter {
 
         HttpEntity<String> entityReq = new HttpEntity<>("parameters", requestHeader);
         try {
-            ResponseEntity<String> result = restTemplate.exchange("http://localhost:8081/securityU/SecurityEndpoint",
-//            ResponseEntity<String> result = restTemplate.exchange("http://securityB:8081/securityU/SecurityEndpoint",
+            ResponseEntity<String> result = restTemplate.exchange("http://securityB:8081/securityU/SecurityEndpoint",
                     HttpMethod.GET,
                     entityReq,
                     String.class);
