@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import java.util.Arrays;
 
+// SOLO PER DEMO LOCALE
 @Component
 public class Init {
 
