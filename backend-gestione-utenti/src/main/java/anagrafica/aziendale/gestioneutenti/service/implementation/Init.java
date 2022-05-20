@@ -11,6 +11,8 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
+
+// SOLO PER DEMO LOCALE
 @Component
 public class Init {
 
