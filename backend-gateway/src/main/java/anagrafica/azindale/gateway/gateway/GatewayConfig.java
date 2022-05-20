@@ -17,7 +17,7 @@ public class GatewayConfig {
     public RouteLocator routes(RouteLocatorBuilder builder) {
         return builder.routes().route("backend_security", r -> r.path("/security/**", "/securityU/**", "/securitySuper/**").uri("http://securityB:8081"))
                 .route("backend_security", r -> r.path("/login").uri("http://securityB:8081"))
-                .route("backend_user", r -> r.path("/control/**").filters(f -> f.filter(filter)).uri("http://usersB:8082")).build();;
+                .route("backend_user", r -> r.path("/control/**").filters(f -> f.filter(filter)).uri("http://usersB:8082")).build();
     }
 
 }
